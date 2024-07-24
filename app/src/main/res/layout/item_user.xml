@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.example.roomdatabaseexample.model.UserUiModel" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/size_16_dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@{String.valueOf(user.id)}"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            tools:ignore="RelativeOverlap"
+            tools:text="A" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/size_4_dp"
+            android:layout_toEndOf="@+id/textViewId"
+            android:text="@{user.name}"
+            android:textColor="@color/black"
+            tools:ignore="RelativeOverlap"
+            tools:text="B" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:onClick="@{() -> user.onRemove.invoke()}"
+            android:src="@android:drawable/ic_delete" />
+    </RelativeLayout>
+</layout>
