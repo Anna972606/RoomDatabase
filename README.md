@@ -7,5 +7,5 @@ Here's an example : Manage user information (store, retrieve, modify, and remove
 
 https://github.com/user-attachments/assets/5791cf56-d12f-4e07-a33f-3566dbc5d567
 
-** See more of my writing here: ** https://medium.com/@anna972606
+**See more of my writing here** https://medium.com/@anna972606
 
